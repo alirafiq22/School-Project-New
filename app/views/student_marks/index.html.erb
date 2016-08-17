@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Student Marks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_marks.each do |student_mark| %>
+      <tr>
+      	<td><%= link_to student_mark.roll_no %></td>
+      	<td><%= link_to student_mark.standard %></td>
+      	<td><%= link_to student_mark.sub_code %></td>
+      	<td><%= link_to student_mark.marks %></td>
+        <td><%= link_to 'Show', student_mark %></td>
+        <td><%= link_to 'Edit', edit_student_mark_path(student_mark) %></td>
+        <td><%= link_to 'Destroy', student_mark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if staff_signed_in? %>
+	<%= link_to 'New Student mark', new_student_mark_path %>
+<% end %>

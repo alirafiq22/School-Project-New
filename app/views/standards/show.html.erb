@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+	<tr>
+		<th>Standard</th>
+		<th>Section</th>
+		<th>Subject Code</th>
+	</tr>
+	<tr>
+		<td><%= @standard.std %></td>
+		<td><%= @standard.section %></td>
+		<td><%= @standard.sub_code %></td>
+	</tr>
+</table>
+<% if staff_signed_in? %>
+	<%= link_to 'Edit', edit_standard_path(@standard) %> |
+<% end %>
+<%= link_to 'Back', standards_path %>

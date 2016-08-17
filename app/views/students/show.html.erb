@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<table>
+	<tr>
+		<th>Registration No.</th>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Father's Name</th>
+		<th>Mother's Name</th>
+		<th>Standard</th>
+	</tr>
+	<tr>
+		<td><%= @student.reg_no %></td>
+		<td><%= @student.name %></td>
+		<td><%= @student.age %></td>
+		<td><%= @student.father_name %></td>
+		<td><%= @student.mother_name %></td>
+		<td><%= @student.standard %></td>
+	</tr>
+</table>
+<% if staff_signed_in? %>
+	<%= link_to 'Edit', edit_student_path(@student) %> |
+<% end %>
+<%= link_to 'Back', students_path %>

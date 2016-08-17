@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+	<tr>
+		<th>Roll No</th>
+		<th>Standard</th>
+		<th>Subject Code</th>
+		<th>Marks</th>
+	</tr>
+	<tr>
+		<td><%= @stud_mark.roll_no %></td>
+		<td><%= @stud_mark.standard %></td>
+		<td><%= @stud_mark.sub_code %></td>
+		<td><%= @stud_mark.marks %></td>
+	</tr>
+</table>
+<% if staff_signed_in? %>
+	<%= link_to 'Edit', edit_student_mark_path(@student_mark) %> |
+<% end %>
+<%= link_to 'Back', student_marks_path %>

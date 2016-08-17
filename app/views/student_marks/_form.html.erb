@@ -1,0 +1,33 @@
+<%= form_for(@student_mark) do |f| %>
+  <% if @student_mark.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student_mark.errors.count, "error") %> prohibited this student_mark from being saved:</h2>
+
+      <ul>
+      <% @student_mark.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+  	<%= f.label "Roll No." %>*&nbsp;
+  	<%= f.text_field :roll_no, required: true %><br />
+  </div>
+  <div class="field">
+  	<%= f.label "Standard" %>*&nbsp;
+  	<%= f.text_field :standard, required: true %><br />
+  </div>
+  <div class="field">
+  	<%= f.label "Subject Code" %>*&nbsp;
+  	<%= f.text_field :sub_code, required: true %><br />
+  </div>
+  <div class="field">
+  	<%= f.label "Marks" %>*&nbsp;
+  	<%= f.text_field :marks %><br />
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

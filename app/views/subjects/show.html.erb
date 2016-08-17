@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+	<tr>
+		<th>Subject Code</th>
+		<th>Subject Name</th>
+	</tr>
+	<tr>
+		<td><%= @subject.sub_code %></td>
+		<td><%= @subject.sub_name%></td>
+	</tr>
+</table>
+<% if staff_signed_in? %>
+	<%= link_to 'Edit', edit_subject_path(@subject) %> |
+<% end %>
+<%= link_to 'Back', subjects_path %>

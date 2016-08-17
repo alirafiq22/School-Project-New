@@ -1,0 +1,51 @@
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+  	<%= f.label "Registration No" %>*&nbsp;
+  	<%= f.text_field :reg_no, required: true %><br />
+  </div>
+  <div class="field">
+  	<%= f.label "Roll No" %>&nbsp;
+  	<%= f.text_field :roll_no%><br />
+  </div>
+  <div class="field">
+  	<%= f.label "Student Name" %>*&nbsp;
+  	<%= f.text_field :name, required: true %><br />
+  </div>
+  <div class="field">
+  	<%= f.label "Age" %>*&nbsp;
+  	<%= f.text_field :age, required: true %><br />
+  </div>
+  <div class="field">
+  	<%= f.label "Gender" %>*&nbsp;
+  	<%= f.radio_button 'gender', 'male' %>Male
+  	<%= f.radio_button 'gender', 'female' %>Female
+  	<!--<%= f.text_field :gender %><br />-->
+  </div>
+  <div class="field">
+  	<%= f.label "Father's Name" %>*&nbsp;
+  	<%= f.text_field :father_name, required: true %><br />
+  </div>
+  <div class="field">
+  	<%= f.label "Mother's Name" %>&nbsp;
+  	<%= f.text_field :mother_name %><br />
+  </div>
+  <div class="field">
+  	<%= f.label "Standard" %>&nbsp;
+  	<%= f.text_field :standard %><br />
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
