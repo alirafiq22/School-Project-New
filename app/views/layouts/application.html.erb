@@ -5,6 +5,9 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="assets/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="assets/main.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= link_to "HOME", root_path %>
@@ -16,6 +19,24 @@
   <% end %>
 </head>
 <body>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/" style="position: absolute">School Home Page</a>
+		<ul class="navbar-nav pull-right list-inline list-unstyled" display="inline-block">
+			<!--<li class="<%= 'active' if current_page?(root_path)%>"><%= link_to 'Home', root_path %></li>-->
+			<% if current_staff %> 
+			<li>  <%= link_to "Staff Home", staff_home_path, class: "navbar-brand" %></li>
+			<li><font size="3 em" color="red" weight="2" onmouseenter="this.color='white'" onmouseleave="this.color='red'"><%= current_staff.name %></b> EmpEmail: <%= current_staff.email %></font></li>
+  		 	<li><%= link_to "Staff Log out", destroy_staff_session_path, method: :delete ,class: "navbar-brand"%></li>
+			<% end %>
+			<% if !staff_signed_in? %>	
+  		 	<li class="<%= 'active' if current_page?(new_staff_registration_path)%>"><%= link_to 'Staff Sign Up',  new_staff_registration_path %></li>
+  		 	<li class="<%= 'active' if current_page?(staff_session_path)%>"><%= link_to 'staff Log In', staff_session_path %></li>
+			<% end %>
+		</ul>
+	</div>
+</nav>
+
 
 <%= yield %>
 
