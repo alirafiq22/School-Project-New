@@ -56,6 +56,10 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'cloudinary'
+#gem 'carrierwave', '~> 0.11.2'
+#gem 'mini_magick', '~> 4.3'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 

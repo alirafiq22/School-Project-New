@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dr6m6aniq
+  api_key: '271314579328426'
+  api_secret: 4j26NSc2a8WM0vmRKQsMcBZ5JWU
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dr6m6aniq
+  api_key: '271314579328426'
+  api_secret: 4j26NSc2a8WM0vmRKQsMcBZ5JWU
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dr6m6aniq
+  api_key: '271314579328426'
+  api_secret: 4j26NSc2a8WM0vmRKQsMcBZ5JWU
+  enhance_image_tag: true
+  static_image_support: false

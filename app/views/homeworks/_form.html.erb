@@ -1,0 +1,32 @@
+<%= form_for(@homework) do |f| %>
+  <% if @homework.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@homework.errors.count, "error") %> prohibited this homework from being saved:</h2>
+
+      <ul>
+      <% @homework.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+      <a id="upload_widget_opener" onclick="f1();">Upload multiple images</a>
+  </div>
+  <div class="field">
+      <%= f.label "Class" %>
+      <%= f.text_field :std %>
+  </div>
+  <div class="field">
+      <%= f.label "Section" %>
+      <%= f.text_field :section %>
+  </div>
+  <div class="field">
+      <%= f.label "Subject" %>
+      <%= f.text_field :subject %>
+  </div>
+  <input type="hidden" name="homework[image]" id="homework[image]"/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -12,6 +12,7 @@
   <tbody>
     <% @staffs.each do |staff| %>
       <tr>
+        <td><%= staff.email %></td>
         <td><%= link_to 'Show', staff %></td>
         <td><%= link_to 'Edit', edit_staff_path(staff) %></td>
         <td><%= link_to 'Destroy', staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>

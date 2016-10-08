@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  resources :homeworks
   resources :student_marks
-  devise_for :staffs
+  devise_for :staffs 
   resources :standards
   resources :students
   resources :subjects
   resources :staffs
-  
+  resources :homeworks
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,7 +15,11 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+  get 'about' => 'welcome#about'
+  get 'contact' => 'welcome#contact'
+  get 'overview' => 'welcome#overview'
+  get 'dashboard' => 'welcome#staff_dashboard'
+  get 'studn_by_reg' => 'delegator#view_stud_by_reg'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
