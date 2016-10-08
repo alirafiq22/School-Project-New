@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def home
+<<<<<<< HEAD
     @img = {}
   end
   
@@ -14,5 +15,12 @@ class WelcomeController < ApplicationController
   
   def staff_dashboard
     @students = Student.all;
+=======
+  
+  end
+  
+  def staff_home
+    @students = Student.all
+>>>>>>> origin/master
   end
 end
