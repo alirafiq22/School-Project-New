@@ -15,15 +15,35 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-<<<<<<< HEAD
-  get 'about' => 'welcome#about'
-  get 'contact' => 'welcome#contact'
-  get 'overview' => 'welcome#overview'
+
+  get 'about'     =>  'welcome#about'
+  get 'contact'   =>  'welcome#contact'
+  get 'overview'  =>  'welcome#overview'
+  get 'vision'    =>  'welcome#vision'
+  get 'corevalues' => 'welcome#corevalues'
+  get 'target'    =>  'welcome#target'
+  get 'message'   =>  'welcome#message'
+  
+  get 'admission' =>  'welcome#admission'
+  get 'clas' =>       'welcome#clas'
+  get 'gallery' =>    'welcome#gallery'
+  get 'guidelines' => 'welcome#guidelines'
+  get 'house' =>      'welcome#house'
+  get 'list' =>       'welcome#list'
+  get 'removal' =>    'welcome#removal'
+  get 'rules' =>      'welcome#rules'
+  get 'sports' =>     'welcome#sports'
+  get 'studlife' =>   'welcome#studlife'
+  get 'timing' =>     'welcome#timing'
+  get 'transport' =>  'welcome#transport'
+  get 'unif' =>       'welcome#unif'
+  get 'withdrawal' => 'welcome#withdrawal'
+  
   get 'dashboard' => 'welcome#staff_dashboard'
   get 'studn_by_reg' => 'delegator#view_stud_by_reg'
-=======
+
   get '/staff_home' => 'welcome#staff_home', as: :staff_home
->>>>>>> origin/master
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

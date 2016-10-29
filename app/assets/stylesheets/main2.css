@@ -1,7 +1,8 @@
+
 .topnav{position:fixed;
 		z-index:1000;
 		width:100%;
-		margin:none;
+		margin-bottom:50px;
 		min-height:70px;
 }
 .topbar {
@@ -34,7 +35,16 @@ a{cursor:pointer;
 a:hover{color:darkblue;
 		}
 
-		
+html, body, .body-wrap,.sidebar1, .sidebar2, .sidenav{height:100%;}
+
+.sidebar3{height:40%;}
+.sidebar4{height:60%;}
+.sidebar{height:80%;}	
+
+@media only screen and (max-width:780px){
+.sidebar1{display:none;}
+.sidebar{height:auto;}
+}
 
 .sidenav>ul {
     margin: 0px;
@@ -44,7 +54,7 @@ a:hover{color:darkblue;
 	width:100%;
     box-shadow:1px 1px 3px 2px #dfdfdf;
     position:relative;
-    height: 100%;
+    height:100%;
     font-size:20px;
     overflow:auto;
     list-style-type:none;
@@ -121,7 +131,7 @@ a:hover{color:darkblue;
   	
 ul.navbar-nav li.icon {display: none;}
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:780px) {
   ul.navbar-nav li:not(:first-child){display: none;}
   ul.navbar-nav li.icon {
 	left:0;
@@ -129,7 +139,7 @@ ul.navbar-nav li.icon {display: none;}
   }
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:780px) {
   ul.navbar-nav.responsive {position: relative;}
   ul.navbar-nav.responsive li.icon {
     position: absolute;
@@ -206,6 +216,7 @@ ul.navbar-nav li.icon {display: none;}
 			background-color:#fff;
 			padding-top:0px;
 			margin:none;
+			border-bottom:1px solid #bbb;
 	
 }
 
@@ -238,27 +249,27 @@ ul.navbar-nav li.icon {display: none;}
 					font-size:18px;
 }
 
-.news{ margin: 0px;
+.news{ width:100%;
+    margin:0 auto;
+    text-align:left;
     padding:0px;
     background-color: white;
     border: 1px solid #fff;
-	width:100%;
     box-shadow:1px 1px 3px 2px #dfdfdf;
     position:relative;
     height: 100%;
     font-size:20px;
     overflow:auto;
-    min-height:300px;
     text-align:center;
 }
 
-.sidebar{position:relative;
-height:100%;
-}
 
-.content{background-color:#fadfc9;
+
+
+.content{background-color:#fff;
 		 width:100%;
 		 height:100%;
+		 border-top:1px solid #bbb;
 }
 
 .modal-header, .close {
@@ -270,3 +281,51 @@ height:100%;
   .modal-footer {
       background-color: #f9f9f9;
   }
+  
+ .footer{
+	  padding-top:10px;
+	  min-height:40px;
+	  background-color:#ed6639;
+  }
+  .footer1>ul>li{
+	  padding-right:30px;
+	  display:inline;
+  }
+  
+  
+@media only screen and (max-width:780px){
+	.footer>div>div>div>p{text-align:center;}
+	.footer>div>div{margin:auto;}
+	.footer1>li{padding-left:20px;}
+	.imagealign{float:center;}
+}
+  
+  
+.panel-heading{	
+	font-size:18px;
+	font-family:arial;
+	text-align:center;
+}
+#list{margin-left:auto; margin-right:auto}
+
+.content>div>h3{color:#385b9f;
+				}
+				
+@media only screen and (min-width:780px){				
+.content>div:not(:last-child)>p{box-sizing:border-box;
+				border-right:1px solid #bbb;
+				padding-right:10px;}
+							  
+.content>div{
+			 font-family:franklin-gothic;
+			 }
+.imagealign{float:right;}
+}		 
+
+.content>div>p{border-right:none;
+			  }
+
+.content2{width:100%;
+		  height:100%;
+		 
+		  }
